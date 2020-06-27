@@ -1,0 +1,88 @@
+<!--jQuery resolve problemas de diferença de navegadores, resolvendo o problema da diferença dos sites no layout, principalmente no mobile que fica muito diferente-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Alura Typer</title>
+    <!-- materiallizecss.com -->
+    <link rel="stylesheet" type="text/css" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+    <!--'container' da lib 'materialize.min.css' centraliza a div -->
+    <div class="container">
+        <!--'center' da lib 'materialize.min.css' centraliza a div -->
+        <h1 class="center">Jogo da Digitação</h1>
+        <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet sollicitudin ante. Etiam semper feugiat dui, at interdum orci tempus in. Vestibulum tincidunt faucibus suscipit. Morbi ac nunc vestibulum, scelerisque tellus eu, lobortis tortor. Nunc sit amet porta augue. Quisque eget tortor nisi. Maecenas tempor, lacus sed condimentum fringilla, libero neque pellentesque massa, eleifend cursus libero ligula vel ligula. Curabitur tincidunt posuere tellus in bibendum. Sed varius a mauris ac sodales</p>
+
+        <div class="center">
+            <img src="img/spinner.gif" alt="Spinner" id="spinner">
+            <p id="erro">Ocorreu um erro, por favor tente novamente</p>
+        </div>
+
+        <ul class="informacoes center">
+        	<li>
+                <!-- 'i' Icone -> vindo do google-fonts.css / materiallizecss.com -->
+                <i class="smaill material-icons icones">description</i> <!-- Icone de descrição -->
+                <span id="tam-frase"></span> palavras
+            </li>
+        	<li>
+                <i class="smaill material-icons icones">query_builder</i> <!-- Icone de relogio -->
+                <span id="tempo-dig">3</span> segundos
+            </li>
+        </ul>
+
+        <p class="corretoErrado" id="FraseVF">A frase está correta</p>
+
+        <textarea class="digitado" rows="8" cols="40"></textarea>
+        <div class=botoes>
+            <a class="btn-floating btn-large waver-effect waves-light red" id="btReiniciar">
+                <!-- Botão de reinicio -->
+                <i class="material-icons">restore</i>
+            </a>
+            <a class="btn-floating btn-large waver-effect waves-light green" id="btPlacar">
+                <!-- Botão de reinicio -->
+                <i class="material-icons">assignment</i>
+            </a>
+            <a class="btn-floating btn-large waver-effect waves-light blue" id="btFrase">
+                <!-- Botão de reinicio -->
+                <i class="material-icons">shuffle</i>
+            </a>
+            <a class="btn-floating btn-large waver-effect waves-light cyan" id="btFraseId">
+                <!-- Botão de reinicio -->
+                <i class="material-icons">repeat_one</i>
+            </a>
+            <input type="number" id="frase-id" min="1" max="10" value="1">
+        </div>
+
+        <ul class="center">
+        	<li><span id="cont-caracteres">0</span> caracteres</li>
+        	<li><span id="cont-palavras">0</span> palavras</li>
+        </ul>
+
+        <section class="placar">
+            <!--
+            Código para ser usado para poder mandar o scroll ate aqui
+            <a href="#" id="foo"></a>
+            -->
+        	<h3 class="center">Placar</h3>
+        	<table class="centered bordered">
+        		<thead>
+        			<th>Nome</th>
+        			<th>Número de Palavras</th>
+                    <th>Remover?</th>
+        		</thead>
+        		<tbody>
+
+        		</tbody>
+        	</table>
+        </section>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/placar.js"></script>
+        <script src="js/frase.js"></script>
+    </div>
+</body>
+</html>
